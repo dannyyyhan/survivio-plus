@@ -15,7 +15,7 @@ var runScript = function(scriptName, callOnLoad) {
 var loadFile = function(fileName) {
 	try{
 		var request = new XMLHttpRequest();
-		request.open('GET', chrome.extension.getURL(fileName), false);
+		request.open('GET', chrome.extension.getURL(fileName), true);
 		request.send(null);  
 		if (request.status === 200) {  
 		  return request.responseText;  
